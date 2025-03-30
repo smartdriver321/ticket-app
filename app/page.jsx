@@ -1,6 +1,7 @@
 import React from 'react'
-import TicketCard from './(components)/TicketCard'
+import TicketCard from '../components/TicketCard'
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 const getTickets = async () => {
 	try {
 		const res = await fetch(`${APP_URL}/api/Tickets`, {

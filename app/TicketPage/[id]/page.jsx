@@ -1,5 +1,6 @@
-import EditTicketForm from '@/app/(components)/EditTicketForm'
+import EditTicketForm from '../../../components/EditTicketForm'
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 const getTicketById = async (id) => {
 	try {
 		const res = await fetch(`${APP_URL}/api/Tickets/${id}`, {
